@@ -31,30 +31,55 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
+			it('each feed has a url', function() {
+				allFeeds.forEach(function(feed){
+					expect(feed.url).toBeDefined();
+					expect(feed.url.length).not.toBe(0);
+				});
+			});
 
 
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
+			it('each feed has a name', function() {
+				allFeeds.forEach(function(feed){
+					expect(feed.name).toBeDefined();
+					expect(feed.name.length).not.toBe(0);
+				})
+			});
     });
 
 
     /* TODO: Write a new test suite named "The menu" */
+	 describe('The menu', function(){
 
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
-
+		it('is hidden by default', function() {
+			//something like
+			// expect the class of slide-menu to be menu-hidden..
+			// figure out how to check the class status of a dom element using jasmine.
+		})
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+		 it('displays when clicked', function() {
+			 //expect after click that slide-menu does not have menu-hidden class on it
+		 });
 
+		 it('hides when clicked again', function() {
+			 //expect after second click that slie-menu does have the menu-hidden class on it
+		 });
+	 });
     /* TODO: Write a new test suite named "Initial Entries" */
+	 describe('Initial Entires', function(){
 
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
@@ -62,11 +87,18 @@ $(function() {
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
+		//it('whatever the fuck they're asking for up there', function(){})
+	});
 
-    /* TODO: Write a new test suite named "New Feed Selection"
+    /* TODO: Write a new test suite named "New Feed Selection" */
+	 describle('New Feed Selection', function(){
 
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+		it('Changes Content', function(){
+
+		});
+	 });
 }());
