@@ -61,21 +61,21 @@ $(function() {
          * hiding/showing of the menu element.
          */
 		it('is hidden by default', function() {
-			//something like
-			// expect the class of slide-menu to be menu-hidden..
+			// expect the class of slide-menu to contain menu-hidden on the load of the page.
+			//I think I can do this by checking on load that the body has the class menu hidden.
 			// figure out how to check the class status of a dom element using jasmine.
-		})
+		});
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
 		 it('displays when clicked', function() {
-			 //expect after click that slide-menu does not have menu-hidden class on it
+			//expect if the body has the class menu-hidden on the click of the button/link menu-icon-link/ the i element of the class icon-list that the body loses/does not have the class menu-hidden anymore
 		 });
 
 		 it('hides when clicked again', function() {
-			 //expect after second click that slie-menu does have the menu-hidden class on it
+			//expect if the body does not have the class menu-hidden on the click of the button/link menu-icon-link/the i element of the class icon-list that the body gains the the class menu-hidden
 		 });
 	 });
     /* TODO: Write a new test suite named "Initial Entries" */
@@ -87,7 +87,13 @@ $(function() {
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
-		//it('whatever the fuck they're asking for up there', function(){})
+
+			// go to notes and find how to do the async javascript test..
+			// after loadFeed completes, expectation that the div which has the class feed has at least one child which contains an article with the class entry... that is how I think it would be represented...
+			// expect(feed.name.length).not.toBe(0) ... hmm I dont think I can reuse this expectation which is checking the length of an array. yeah, thats not going to work, I've got a feeling this will involve some sort of DOM crawling using jquery then a jasmine function to check the class of the available children.
+			it('has at least a single .entry element within .feed container', function(){
+
+			});
 	});
 
     /* TODO: Write a new test suite named "New Feed Selection" */
@@ -98,7 +104,7 @@ $(function() {
          * Remember, loadFeed() is asynchronous.
          */
 		it('Changes Content', function(){
-
+			// clearly the trickiest of the tests... it has to have some way to determine that the content in the .feed div changes when a link in the slide-menu is clicked... need to read up on jasmine documentation.
 		});
 	 });
 }());

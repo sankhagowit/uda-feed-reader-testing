@@ -120,7 +120,7 @@ $(function() {
     feedList.on('click', 'a', function() {
         var item = $(this);
 
-        $('body').addClass('menu-hidden');
+        $('body').addClass('menu-hidden'); // Should this be a toggle class opposed to an addClass? Will it keep adding the class resulting in multiple menu-hidden classes on the boddy then when the toggleClass is called in the event listener below does that work? We shal see!
         loadFeed(item.data('id'));
         return false;
     });

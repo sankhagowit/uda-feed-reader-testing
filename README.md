@@ -2,8 +2,17 @@
 
 
 # Modifications Made to Project
+	* Created expectation which loops through each index of the allFeeds array and checks for each object if the component url and name are defined and have are not equal to a length of 0
+	* Created expectation that the body element has the class menu-hidden on load.
+	* Created expectations when the menu-icon-link is clicked in the header if the body has the class menu-hidden that the menu-hidden class is turned off and vice versa that if the body does not have the class menu-hidden when the button is clicked that it gains the class menu-hidden.
 	*
-	*
+
+# To Do
+	* Figure out how to test classes in the DOM
+	* Figure out how to get jasmine tests to do events (clicks on menu) then clicks on the links for a need feed within the slide menu.
+	* Review how to handle the jasmine tests that depend on an asynchronous processes - "18. Callbacks should be used to ensure that feeds are loaded before they are tested."
+	* Whatever this means... : 19. Implement error handling for undefined variables and out-of-bound array access.
+	* Figure out a way/process for the test to determine the content of the .entry classes and then upon the click of a new feed to test that the content which is subsequently displayed is different than what the content was before that feed was clicked on.
 
 # Project Overview
 
