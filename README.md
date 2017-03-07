@@ -1,5 +1,6 @@
 # Installation
 To run the feed reader with the jasmine tests open the index.html file in your browser. Scroll to the bottom to see the output of the jasmine tests.
+To view the syntax of the tests please review the file in jasmine/spec/feedreader.js
 
 # Modifications Made to feedreader.js
 	* Created expectation which loops through each index of the allFeeds array and checks for each object if the component url and name are defined and have are not equal to a length of 0
