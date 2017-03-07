@@ -1,18 +1,13 @@
 # Installation
+To run the feed reader with the jasmine tests open the index.html file in your browser. Scroll to the bottom to see the output of the jasmine tests.
 
-
-# Modifications Made to Project
+# Modifications Made to feedreader.js
 	* Created expectation which loops through each index of the allFeeds array and checks for each object if the component url and name are defined and have are not equal to a length of 0
 	* Created expectation that the body element has the class menu-hidden on load.
 	* Created expectations when the menu-icon-link is clicked in the header if the body has the class menu-hidden that the menu-hidden class is turned off and vice versa that if the body does not have the class menu-hidden when the button is clicked that it gains the class menu-hidden.
-	*
+	* After the loadFeed function has completed extracted and stored in the grandchildren from the class '.feed' who have the class '.entry' and created the expectation that this collection of element exists and is not 0.
+	* Created array of content currently on the page, then called the loadFeed function for the second feed in the allFeeds array and stored the new content rendered on the page. After that content renders, Created an expectation that the old and new content are not the same.
 
-# To Do
-	* Figure out how to test classes in the DOM
-	* Figure out how to get jasmine tests to do events (clicks on menu) then clicks on the links for a need feed within the slide menu.
-	* Review how to handle the jasmine tests that depend on an asynchronous processes - "18. Callbacks should be used to ensure that feeds are loaded before they are tested."
-	* Whatever this means... : 19. Implement error handling for undefined variables and out-of-bound array access.
-	* Figure out a way/process for the test to determine the content of the .entry classes and then upon the click of a new feed to test that the content which is subsequently displayed is different than what the content was before that feed was clicked on.
 
 # Project Overview
 

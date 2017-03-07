@@ -71,6 +71,7 @@ function init() {
 
                  if (cb) {
                      cb();
+							console.log("cb() fired");
                  }
                },
        error: function (result, status, err){
