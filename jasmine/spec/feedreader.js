@@ -106,7 +106,7 @@ $(function() {
        * by the loadFeed function that the content actually changes.
        * Remember, loadFeed() is asynchronous.
        */
-      var oldContent;
+      var oldContent = "";
       beforeEach(function(done) {
 			jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
 			loadFeed(0, function(){
@@ -119,7 +119,7 @@ $(function() {
       });
 
       it('Changes Content', function() {
-         var newContent;
+         var newContent = "";
 			var newHTML = document.getElementsByClassName('entry');
 			for(var i =0; i < newHTML.length; i++){
 				newContent += newHTML[i].innerText;
